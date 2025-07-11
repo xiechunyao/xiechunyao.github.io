@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "我的第一篇post"
 author: oran
 date:   2025-07-10
