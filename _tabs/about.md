@@ -3,6 +3,8 @@
 icon: fas fa-info-circle
 order: 4
 ---
+# *关于本站*
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+本站始建于2022年，2025年翻新。
+
+[旧网站存档](/assets/old/index.html)
