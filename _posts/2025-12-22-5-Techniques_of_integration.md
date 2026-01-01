@@ -16,13 +16,28 @@ published: true
 ## 基本恒等变换公式
 
 下文中我们将用到
-1. $$\sin^2x + \cos^2x = 1$$
+1.  $$
+    \sin^2x + \cos^2x = 1
+    $$
 2. *half-angle identites* / 半角恒等式
-    $$\sin(2x) = 2\sin(x)\cos(x)$$
-    $$\cos(2x) = \cos^2(x) - \sin^2(x)$$ 
+   
+    $$
+    \sin(2x) = 2\sin(x)\cos(x)
+    $$
+
+    $$
+    \cos(2x) = \cos^2(x) - \sin^2(x)
+    $$
+
     以及常用的两个变形
-    $$\cos^2x = \frac{1 + \cos(2x)}{2}$$
-    $$\sin^2x = \frac{1 - \cos(2x)}{2}$$
+
+    $$
+    \cos^2x = \frac{1 + \cos(2x)}{2}
+    $$
+
+    $$
+    \sin^2x = \frac{1 - \cos(2x)}{2}
+    $$
 
 
 ## $\int\sin(x^n)\cos(x^m) \, dx$
@@ -51,14 +66,21 @@ $$
 \int \cos^3(2x) \, dx &= \frac{1}{2} \sin(2x) - \frac{1}{6} \sin^3(2x) + C.
 \end{aligned}
 $$
+
 ### 2. hard case
 当指数n, m都为偶数, 问题更加难解决. 
 
 无论我们怎么凑微分, 总存在奇数因式, 我们无法像easy case中运用$\sin^2(x) + \cos^2(x) = 1$将剩余的因数统一转换为包含微分算子的式子.
 
 因此我们使用
-$$\cos^2(x) = \frac{1 + \cos(2x)}{2}$$
-$$\sin^2(x) = \frac{1 - \cos(2x)}{2}$$
+$$
+\cos^2(x) = \frac{1 + \cos(2x)}{2}
+$$
+
+$$
+\sin^2(x) = \frac{1 - \cos(2x)}{2}
+$$
+
 来进行降幂操作
 
 如下例子(*摘自MIT18.01SC*):
@@ -125,13 +147,16 @@ $$
 
 如$\int\frac{1}{\sqrt{x^2 + 4x}}\,dx$, 作如下转换:
 
-$$\int \frac{dx}{\sqrt{x^2 + 4x}} = \int \frac{dx}{\sqrt{(x + 2)^2 - 4}}$$
+$$
+\int \frac{dx}{\sqrt{x^2 + 4x}} = \int \frac{dx}{\sqrt{(x + 2)^2 - 4}}
+$$
 
 配方过程我们可以使用对比系数法.
 
 $$
 x^2 + 4x = (x + a)^2 +  b = x^2 + 2ax + a^2 + c
 $$
+
 可得 $a = 2, c = -4$
 
 配方完我们就可以使用二中的三角换元表格来进行换元了.
@@ -149,21 +174,29 @@ $$
 Cover-up Method是一个将复杂的有理分式转换为部分分式的方法.在此举例说明.
 
 假设我们要分解：
+
 $$
 \frac{x+3}{(x-1)(x+2)} = \frac{A}{x-1} + \frac{B}{x+2}
 $$
+
 **第一步**：求 $A$ (对应分母为 $x-1$)遮住左边分母中的 $(x-1)$。令 $x-1 = 0 \Rightarrow \mathbf{x = 1}$。将 $x=1$ 代入剩余部分：
+
 $$
 A = \left. \frac{x+3}{\square \cdot (x+2)} \right|_{x=1} = \frac{1+3}{1+2} = \frac{4}{3}
 $$
+
 **第二步**：求 $B$ (对应分母为 $x+2$)遮住左边分母中的 $(x+2)$。令 $x+2 = 0 \Rightarrow \mathbf{x = -2}$。将 $x=-2$ 代入剩余部分：
+
 $$
 B = \left. \frac{x+3}{(x-1) \cdot \square} \right|_{x=-2} = \frac{-2+3}{-2-1} = \frac{1}{-3} = -\frac{1}{3}
 $$
+
 **结果**：
+
 $$
 \frac{x+3}{(x-1)(x+2)} = \frac{4/3}{x-1} - \frac{1/3}{x+2}
 $$
+
 ### 1.适用范围与局限性
 
  **最适用**: 分母全是互不相同的线性因子，如 $(x-a)(x-b)(x-c)$。
@@ -178,10 +211,13 @@ $$
 $$
 \frac{x+3}{(x-1)(x+2)} = \frac{A}{x-1} + \frac{B}{x+2}
 $$
+
 对于上等式, 遮住$x - 1$实际就是两边同乘$x - 1$, 带入$x = 1$自然就能得到A, 同理也能解释为什么分母有重复因子只能求出其最高次幂的系数.
+
 $$
 \frac{x+3}{(x+2)} = \frac{A}{x-1}(x - 1) + \frac{B}{x+2}(x - 1)
 $$
+
 对于系数比较多的, 这种方法还是比较快的. [点这里](/assets/pdf/Cover-Up_MIT18_01SCF10_Ses74c.pdf)查看原文介绍.
 
 对于因式分解, 这里介绍[长除法](/assets/pdf/long_division_MIT18_01SCF10_Ses75c.pdf), 相信大家都已经会使用.
@@ -190,11 +226,13 @@ $$
 
 ## Integration by Part 分部积分法
 相信大家都会, 基本公式: 
+
 $$
 \int u \,dv =  uv - \int v \,du
 $$
 
 通过分部积分我们能求得
+
 $$
 \int \ln x = x \ln x -  x + C
 $$
@@ -203,14 +241,17 @@ $$
 那么$\int \ln^n x \, dx$呢?
 
 通过分部积分我们可以得到
+
 $$
 \int \ln^n x \, dx= x \ln x - n\int (\ln x)^{n -1} \, dx
 $$
+
 可以写作$F_n(x) = x \ln x - nF_{n-1}(x)$, 我们称为reduction .formula
 
 使用这个公式我们可以计算$\int \ln^n x \, dx$
 
 这里再介绍另外一个reduction formula
+
 $$
 \int x^n e^{ax} \, dx = \frac{1}{a} x^n e^{ax} - \frac{n}{a} \int x^{n-1} e^{ax} \, dx
 $$
@@ -231,7 +272,10 @@ $$
 **示例 1：幂函数与三角函数组合
 **
 计算积分：
-$$\int x^3 \cos x \, dx$$
+
+$$
+\int x^3 \cos x \, dx
+$$
 
 **步骤说明：**
 * 令 $u^{(0)} = x^3$（作为要求导的部分）。
@@ -260,7 +304,6 @@ $$
 \end{aligned}
 $$
 
-
 ---
 
 ### 2. 特殊情况：循环积分 (Recurring Integrals)
@@ -269,7 +312,10 @@ $$
 **示例 2：指数函数与三角函数
 **
 计算积分：
-$$\int e^x \cos x \, dx$$
+
+$$
+\int e^x \cos x \, dx
+$$
 
 | $i$  | 符号 (Sign) | A: 导数 $u^{(i)}$ | B: 积分 $v^{(n-i)}$ |
 | :--- | :---------- | :---------------- | :------------------ |
@@ -280,12 +326,14 @@ $$\int e^x \cos x \, dx$$
 **观察：** 第 $i=2$ 行的 $A \times B$ 乘积（考虑符号）为 $\int e^x (-\cos x) dx$，这正是原始被积函数的负数。
 
 **推导过程：**
+
 $$
 \int e^x \cos x \, dx = \underbrace{(+1)(e^x)(\sin x)}_{j=0} + \underbrace{(-1)(e^x)(-\cos x)}_{j=1} + \int \underbrace{(+1)(e^x)(-\cos x)}_{i=2} \, dx
 $$
 
 
 **整理得：**
+
 $$
 \begin{aligned}
 \int e^x \cos x \, dx &= e^x \sin x + e^x \cos x - \int e^x \cos x \, dx \\
