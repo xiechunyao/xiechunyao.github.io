@@ -1,10 +1,22 @@
 ---
 # the default layout is 'page'
+title: Hello, world. I'm xiechunyao.
 icon: fas fa-info-circle
 order: 4
 ---
-# *关于本站*
+## 🧑‍💻关于我 (About Me)
+大一新生，计算机爱好者
 
-本站始建于2022年，2025年翻新。
+### 🛠技能栈
+`C`, `Cpp`, `GUN & Linux`, `git`, `vim`
 
-[旧网站存档](/assets/old/index.html)
+### 当前目标
+正在学习CSAPP, neovim, rust
+
+## 📬 找到我 (Contact)
+GitHub: [xiechunyao](https://github.com/xiechunyao){:target="_blank"}
+
+Email: [oranshea25@gmail.con](mailto:oranshea25@gmail.com)
+
+Blog: [xiechunyao.github.io](https://xiechunyao.github.io){:target="_blank"}
+
