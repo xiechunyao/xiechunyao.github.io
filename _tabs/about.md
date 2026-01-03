@@ -5,7 +5,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 ## 🧑‍💻关于我 (About Me)
-大一新生，计算机爱好者
+计算机专业大一新生, 计算机爱好者
 
 ### 🛠技能栈
 `C`, `Cpp`, `GUN & Linux`, `git`, `vim`
