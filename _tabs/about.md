@@ -8,10 +8,10 @@ order: 4
 计算机专业大一新生, 计算机爱好者
 
 ### 🛠技能栈
-`C`, `Cpp`, `GUN & Linux`, `git`, `vim`
+`C`, `Cpp`, `JAVA`, `Python`, `GUN & Linux`, `git`, `vim` 
 
 ### 当前目标
-正在学习CSAPP, neovim, rust
+正在学习CSAPP, CS61b, D2L(deeplearing)
 
 ## 📬 找到我 (Contact)
 GitHub: [xiechunyao](https://github.com/xiechunyao){:target="_blank"}
